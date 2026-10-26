@@ -1,41 +1,32 @@
-# AI交叉科学社 · 西湖大学
+# AI交叉科学社 · AI Interdisciplinary Science Club
 
-独立静态网站：根目录 `index.html` 就是完整首页，所有页面内容直接保存在 HTML 中。无需安装依赖、运行构建或启动后端服务。移动导航、活动筛选和照片预览由渐进增强 JavaScript 提供，禁用 JavaScript 仍可浏览全部内容。
+## 我们是谁
 
-## 发布到任意 GitHub 仓库
+西湖大学 AI 交叉科学社，如社团名称所示，宗旨在于：以「AI 交叉科学 / 爱交叉科学」为社团主题，聚集热爱 AI（人工智能）交叉科学、AI 与交叉科学的同学。
 
-1. 将本目录中的网站文件复制到目标仓库的**根目录**，保留隐藏文件 `.nojekyll`，不要再套一层 `docs/`。迁移到独立仓库时不要复制原目录的 `.git/`。
-2. 打开 **Settings → Pages**，选择 **Deploy from a branch**。
-3. 选择存放网站的分支（通常为 `main`）和 **/(root)**，保存。
-4. 使用 Pages 设置页提供的网址访问。
+社团为同学提供良好的交流与讨论、了解与学习 AI 交叉科学及相关领域知识和前沿研究的平台与机会，促进同学在相关领域探索潜在的科学发现与技术创新。
 
-链接和资源使用相对路径，支持 `https://用户名.github.io/仓库名/`、用户主页仓库和自定义域名，不需要改代码。
+## Our mission
 
-网站运行所需文件为 `index.html`、`style.css`、`theme.css`、`enhancements.js`、`assets/`、`about/`、`weekly/`、`events/` 和 `activity/`。旧工具及资料集中保存在 `_archived/`，可以随仓库保存，也可以在仅发布网站时省略。
+The AI Interdisciplinary Science Club at Westlake University endeavors to amass a cohort of zealous students who are enthusiastic about the nascent field of artificial intelligence and interdisciplinary science. The club provides students with ample opportunities to communicate, discuss, comprehend, and learn the associated knowledge and cutting-edge research, and eventually, to spur their potential scientific discoveries and technological innovations in multifarious fields.
 
-## 编辑与预览
+## 我们关注什么 · What we explore
 
-- `index.html`：首页。
-- `weekly/index.html`、`events/index.html`：活动列表。
-- `activity/*/index.html`：活动详情。
-- `about/index.html`：社团介绍。
-- `assets/`：网站原始图片及 Logo；`assets/thumbs/`：首页与活动卡片使用的 WebP 预览图片。
-- `style.css`：基础布局；`theme.css`：新版视觉和响应式样式。
-- `enhancements.js`：手机菜单、活动搜索与年份筛选、照片放大和键盘切换，无后端依赖。
-- `_archived/`：旧入口、工具、说明、资料和改版前的 HTML/CSS 备份，不是运行依赖。
+- 人工智能前沿与新兴方向 · Frontier research and emerging directions in AI
+- AI 与不同学科、科研问题及真实场景的连接 · Connections between AI, disciplines, research questions, and real-world contexts
+- 科学发现的方法、工具与过程 · Methods, tools, and processes for scientific discovery
+- 从想法走向实践的技术创新 · Technological innovation that turns ideas into practice
+- 人与 AI、社会与未来的关系 · The relationship between people, AI, society, and the future
 
-可以直接双击 `index.html` 预览，也可以在本目录执行：
+## 网站内容 · On this site
 
-```sh
-python3 -m http.server 8000 --bind 127.0.0.1
-```
+- [首页 · Home](index.html)：了解社团主题与最新活动。
+- [每周相聚 · Weekly Gatherings](weekly/index.html)：回看日常讨论与交流。
+- [特别活动 · Special Events](events/index.html)：了解创客活动、联合交流与其他特别项目。
+- [关于我们 · About](about/index.html)：认识社团的理念与参与方式。
 
-打开 `http://localhost:8000`，按 `Ctrl+C` 停止预览。修改活动时同步更新相应详情和列表卡片；首页展示最新三项日常活动。新增文件继续使用相对链接，不要把仓库名称或本机路径写进页面。
+## 一句话 · In one sentence
 
-筛选结果可以直接分享浏览器地址，例如 `weekly/index.html?q=科研&year=2026`。照片预览支持左右方向键切换和 `Esc` 关闭，手机菜单也支持 `Esc` 关闭。系统开启“减少动态效果”时，网站会取消动画。
+聚集热爱 AI 与交叉科学的同学，在交流学习中探索前沿，在学科交叉处寻找科学发现与技术创新的可能。
 
-首页与卡片通过 `<picture>` 优先加载 WebP，浏览器不支持时回退到 JPG。替换图片时同步更新对应预览图片，以及 HTML 中的 `width`、`height` 和 `alt`；详情页使用原图。普通预览图片宽度为 720 像素，首页主图另有 1200 像素版本。
-
-GitHub Pages 不运行服务器后端。如果将来需要登录、报名或内容管理，需要另行接入服务。当前内容和导航全部静态化；归档中的 Python 服务只用于旧版局域网分享和二维码海报，不需要安装或启动。
-
-`.nojekyll` 让 Pages 直接发布静态文件。根目录发布时 `_archived/` 也会被上传；它是归档目录，不是访问控制机制。只部署网站时可以省略该目录。
+Bringing together students who love AI and interdisciplinary science to learn, explore frontier research, and pursue discovery and innovation across disciplines.
